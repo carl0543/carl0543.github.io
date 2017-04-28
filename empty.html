@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- you can use these links, but better you have a link to the versions you need -->
+        <!-- usage of folder "current" is not recommended -->
+        <!-- see http://beaverslider.com/how-to-setup/docs/general for more info -->
+        <script src="http://beaverslider.com/code/current/beaverslider.js"></script>
+        <script src="http://beaverslider.com/code/current/beaverslider-effects.js"></script>
+
+        <script>
+            $(function(){
+                var slider = new BeaverSlider({
+                    type: "carousel",
+                    structure: {
+                        container: {
+                            id: "my-slider-id",
+                            width: 640,
+                            height: 480
+                        },
+                        messages: {
+                            containerClass: "message-container",
+                            left: 15,
+                            top: 15
+                        }
+                    },
+                    content: {
+                        images: ["http://beaverslider.com/img/slider-demo/1.jpg","http://beaverslider.com/img/slider-demo/2.jpg"],
+                        messages: ["hh"," dd"]
+                    },
+                    animation: {
+                        effects: effectSets["carousel: slide"],
+                        interval: 4000,
+                        initialInterval: 4000,
+                        waitAllImages: true,
+                        changeSameMessage: false,
+                        showMessages: "linked"
+                    }
+                });
+            });
+        </script>
+
+        <style>
+            /* messages */
+            .message-container {
+            background: #424242;
+            color: white;
+            font-size: 0.9em;
+            font-family: PT Sans Narrow;
+            padding: 5px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div id="my-slider-id"></div>
+        Open in editor!
+    </body>
+</html>
