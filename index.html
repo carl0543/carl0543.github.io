@@ -1,3 +1,114 @@
+<!doctype html>
 <html>
-Test
+    <head>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- you can use these links, but better you have a link to the versions you need -->
+        <!-- usage of folder "current" is not recommended -->
+        <!-- see http://beaverslider.com/how-to-setup/docs/general for more info -->
+        <script src="http://beaverslider.com/code/current/beaverslider.js"></script>
+        <script src="http://beaverslider.com/code/current/beaverslider-effects.js"></script>
+
+        <script>
+            $(function(){
+                var slider = new BeaverSlider({
+                    type: "carousel",
+                    structure: {
+                        container: {
+                            id: "my-slider-id",
+                            width: 640,
+                            height: 427
+                        },
+                        player: {
+                            containerClass: "player-container",
+                            backClass: "player-back",
+                            forwardClass: "player-forward",
+                            pauseClass: "player-pause",
+                            playClass: "player-play",
+                            show: "mouseover",
+                            left: 15,
+                            top: 15
+                        },
+                        messages: {
+                            containerClass: "message-container",
+                            left: 300,
+                            top: 15
+                        }
+                    },
+                    content: {
+                        images: ["img/marines_a.png","img/carrier_a.png","img/selloff_a.png","img/suit_a.png","img/deathrap_a.png","img/liam_a.png","img/nimrod_a.png"],
+                        messages: ["Royal Marines","Aircraft carriers","Land selloff","Armour","Tank","Liam Fox","Nimrod"]
+                    },
+                    animation: {
+                        effects: effectSets["carousel: slide"],
+                        interval: 400000,
+                        initialInterval: 400000,
+                        waitAllImages: true,
+                        changeSameMessage: false,
+                        showMessages: "linked"
+                    }
+                });
+            });
+        </script>
+
+        <style>
+            /* messages */
+            .message-container {
+            background: #424242;
+            color: white;
+            font-size: 0.9em;
+            font-family: PT Sans Narrow;
+            padding: 5px;
+            }
+            ,      /* usual player with images */
+            .player-container {
+            height: 28px;
+            white-space: nowrap;
+            }
+            .player-pause, .player-play, .player-forward, .player-back {
+            /* this displays element as inline-block; zoom and *display is a hack for ie7 which does not support inline-block */
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            cursor: pointer;
+            margin-left: 5px;
+            height: 28px;
+            width: 33px;
+            background-image: url(http://beaverslider.com/code/current/player.png);
+            }
+            .player-pause {
+            background-position: -199px 0;
+            width: 28px;
+            }
+            .player-pause:hover {
+            background-position: -161px 0;
+            }
+            .player-play {
+            background-position: -356px 0;
+            width: 28px;
+            }
+            .player-play:hover {
+            background-position: -319px 0;
+            }
+            .player-back {
+            background-position: -275px 0;
+            }
+            .player-back:hover {
+            background-position: -234px 0;
+            }
+            .player-forward {
+            background-position: -434px 0;
+            }
+            .player-forward:hover {
+            background-position: -393px 0;
+            }
+            
+        </style>
+    </head>
+
+    <body bgcolor="black">
+
+<img src="img/mainbanner.png">
+
+        <div id="my-slider-id"></div>
+    </body>
 </html>
