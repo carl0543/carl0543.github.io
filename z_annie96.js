@@ -38,9 +38,9 @@ function glitch() {
 
 function username(msg) {
   if ($(msg).hasClass('annie')) {
-    return 'annie96';
+    return 'fred';
   } else if ($(msg).hasClass('david')) {
-    return 'mcdavey';
+    return 'Janine28';
   }
 }
 
