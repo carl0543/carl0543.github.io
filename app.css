@@ -1,0 +1,430 @@
+html, body {
+  min-height: 200%;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Lato';
+  font-size: 16px;
+
+  background-color: #efefef;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+
+  color: #F0F0F0;
+  -webkit-font-smoothing: antialiased;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+}
+
+/* ipad */
+@media only screen 
+and (max-device-width : 1024px)  { 
+  .cover {
+    background-attachment: scroll;
+  }
+}
+
+.cover-wrapper {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+
+  background-color: rgba(0,0,0,0.2);
+}
+
+.cover .storyteller {
+  font-family: 'Source Sans Pro';
+  position: absolute;
+
+  top: 10px;
+  left: 20px;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+
+  color: #F0F0F0 !important;
+  text-decoration: none;
+}
+
+.cover .storyteller span {
+  font-weight: 300; 
+}
+
+.cover .details {
+  width: 34%;
+  position: absolute;
+  bottom: 60px;
+  left: 34%;
+  text-shadow: 1px 1px 20px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 900px){
+  .cover .details {
+    width: 100%;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.cover .details .title {
+  font-size: 46px;
+  line-height: 52px;
+  margin-bottom: 10px;
+}
+
+.cover .details .tagline {
+  font-size: 26px; 
+  line-height: 30px;
+}
+
+.cover .story-details {
+  margin-bottom: 20px;
+}
+
+.cover .details .author {
+  font-size: 26px; 
+  margin-bottom: 5px;
+}
+
+.cover .details .publish-date {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-size: 22px; 
+}
+
+.cover .reading-time {
+  position: absolute;
+  top: 21px;
+  right: 20px; 
+}
+
+.cover .share {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; 
+}
+
+.cover .cover-attribution {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;  
+  font-size: 10px;
+}
+
+@media screen and (max-width: 900px){
+  .cover .storyteller {
+    font-size: 24px;
+  }
+
+  .cover .reading-time {
+    display: none;
+  }
+
+  .cover .details .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .cover .details .tagline {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .cover .details .author {
+    font-size: 18px;
+  }
+
+  .cover .details .publish-date {
+    font-size: 16px;
+  }
+
+  .cover .share {
+    right: 10px; 
+  }
+}
+
+.story-cover-arrow {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  margin-left: -8px;
+  border: 2px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0);
+  border-left: 0;
+  border-top: 0;
+  outline: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.story-cover-arrow:hover {
+  border-color: rgba(255,255,255,0.65);
+}
+
+.text {
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 600px;
+  margin-left: -300px;
+  left: 50%;
+
+  font-size: 21px;
+  line-height: 32px;
+  padding-top: 40px;
+  margin-bottom: 100px;
+}
+
+.text p {
+  margin-bottom: 30px;
+}
+
+.read-next {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  display: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+
+  color: #F0F0F0 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.read-next .wrapper {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 20px rgba(0,0,0,1);
+}
+
+.read-next .next {
+  width: 600px;
+  margin-left: -300px;
+  left: 50%;
+
+  position: absolute;
+  top: 10px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.read-next .title {
+  font-size: 35px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.read-next .tagline {
+  font-size: 24px; 
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.read-next .details {
+  position: absolute;
+  bottom: 20px;
+  width: 600px;
+  margin-left: -300px;
+  left: 50%;
+}
+
+.ads {
+  margin-bottom: 30px;
+}
+
+.ads .desktop-ad {
+  width: 970px;
+  height: 90px;
+  margin-left: -485px;
+  position: relative;
+  left: 50%;
+}
+
+.ads .tablet-ad {
+  width: 728px;
+  height: 90px;
+  margin-left: -364px;
+  position: relative;
+  left: 50%;
+}
+
+.ads .mobile-ad {
+  width: 320px;
+  height: 50px;
+  margin-left: -160px;
+  position: relative;
+  left: 50%;
+}
+
+.end-text-social {
+  height: 28px;
+}
+
+.end-text-social .fb {
+  display: inline-block;
+}
+
+.end-text-social .twitter {
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+  top: 8px;
+}
+
+.end-text-social .tumblr {
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+  top: 8px;
+}
+
+#submissions {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 50px;
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#submissions .panel-body {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#submissions p {
+  margin-bottom: 10px;
+}
+
+#submissions img {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+}
+
+#submissions .author-name {
+  font-weight: bold;
+}
+
+#submissions .action {
+  margin-top: 10px;
+  width: 250px;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  text-align: center;
+}
+
+#submissions .tip, #submissions form, {
+  width: 100%;
+} 
+
+#submissions form {
+  height: 50px;
+}
+
+#submissions form input[type='image'] {
+  position: relative;
+  left: 50%;
+  margin-left: -182px;
+}
+
+/* iphone */
+@media screen and (max-width: 650px){
+  .text, .read-next .next, .read-next .details {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Nexus 7 */
+@media only screen and (max-width: 720px) and (orientation: portrait) {
+  .text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .text p {
+    margin-bottom: 25px;
+  }
+}
+
+/* Other phones */
+@media screen and (max-width: 500px) {
+  .text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .text p {
+    margin-bottom: 20px;
+  }
+  
+  .read-next .next {
+    font-size: 16px;
+  }
+
+  .read-next .title {
+    font-size: 26px;
+  }
+
+  .read-next .tagline {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .read-next .reading-time {
+    font-size: 12px; 
+  }
+
+  .end-text-social {
+    height: 100px;
+  }
+  
+  .end-text-social .fb {
+    display: block;
+  }
+
+  .end-text-social .twitter, .end-text-social .tumblr {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;    
+  }
+}
+
