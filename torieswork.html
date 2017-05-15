@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- you can use these links, but better you have a link to the versions you need -->
+        <!-- usage of folder "current" is not recommended -->
+        <!-- see http://beaverslider.com/how-to-setup/docs/general for more info -->
+        <script src="https://beaverslider.com/code/current/beaverslider.js"></script>
+        <script src="https://beaverslider.com/code/current/beaverslider-effects.js"></script>
+
+        <script>
+            $(function(){
+                var slider = new BeaverSlider({
+                    type: "carousel",
+                    structure: {
+                        container: {
+                            id: "my-slider-id",
+                            width: 640,
+                            height: 427
+                        },
+
+player: {
+                            containerClass: "player-container",
+                            backClass: "player-back",
+                            forwardClass: "player-forward",
+                            pauseClass: "player-pause",
+                            playClass: "player-play",
+                            show: "mouseover",
+                            left: 15,
+                            top: 15
+                        },
+
+                        messages: {
+                            containerClass: "message-container",
+                            left: 15,
+                            top: 260
+                        }
+                    },
+                    content: {
+                        images: ["ocean_a.png", "maytrump.jpg","carrier_a.png","selloff_a.png","f35.jpg","suit_a.png","deathtrap_a.png","liamf_a.png","nimrod_a.png"],
+                        messages: ["The Tories have destroyed vital tax credits, changing the thresholds, rationing credits to two children and condemning more children to poverty.","The Tories created something called a Work Allowance under Universal Credit - before slashing it in half, costing families 1000s.","The Tories delivered the slowest growth in wages and the biggest increase in insecure work since records began.","The Tories demonised and vilified our proud Trades Unions - and tried effectively to destroy them for good, with the disgraceful Trade Union Bill.","These Tories have cut the percentage of public spending on the services we need - NHS, Social Care, Schools - to the lowest levels since the 1930s!","Tories have slashed financial support for working class kids trying to go to university, or train as a nurse, or set up in their own home.","Tories have denied many thousands access to justice in the workplace with punishing Tribunal Fees and the end of Legal Aid.","Tories have destroyed opportunities for learning, culture and leisure in so many communities through cuts to libraries, theatres, arts centres & parks.","The Tories withdrew full employment rights from everyone working for under two years in the same job."]
+                    },
+                    animation: {
+                        effects: effectSets["carousel: slide"],
+                        interval: 8000,
+                        initialInterval: 8000,
+                        waitAllImages: true,
+                        changeSameMessage: false,
+                        showMessages: "linked"
+                    }
+                });
+            });
+        </script>
+
+        <style>
+      /* usual player with images */
+            .player-container {
+            height: 28px;
+            white-space: nowrap;
+            }
+            .player-pause, .player-play, .player-forward, .player-back {
+            /* this displays element as inline-block; zoom and *display is a hack for ie7 which does not support inline-block */
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            cursor: pointer;
+            margin-left: 5px;
+            height: 28px;
+            width: 33px;
+            background-image: url(https://carl0543.github.io/player.png);
+            }
+            .player-pause {
+            background-position: -199px 0;
+            width: 28px;
+            }
+            .player-pause:hover {
+            background-position: -161px 0;
+            }
+            .player-play {
+            background-position: -356px 0;
+            width: 28px;
+            }
+            .player-play:hover {
+            background-position: -319px 0;
+            }
+            .player-back {
+            background-position: -275px 0;
+            }
+            .player-back:hover {
+            background-position: -234px 0;
+            }
+            .player-forward {
+            background-position: -434px 0;
+            }
+            .player-forward:hover {
+            background-position: -393px 0;
+            }
+
+          /* messages */
+            .message-container {
+            background: #424242;
+            color: white;
+            font-size: 0.9em;
+            font-family: Arial;
+            padding: 5px;
+            }
+            
+        </style>
+    </head>
+
+    <body bgcolor="black">
+<img src="mainbanner2.png" />
+
+        <div id="my-slider-id"></div>
+        Open in editor!
+    </body>
+</html>
